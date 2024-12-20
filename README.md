@@ -26,13 +26,13 @@ Offers dietary suggestions based on available inventory.
 ```
 !pip install ultralytics
 ```
-Import YOLO
+### Import YOLO
 ```
 from ultralytics import YOLO
 import matplotlib.pyplot as plt
 from PIL import Image
 ```
-To Upload the Image and get the Uploaded Image File name
+### To Upload the Image and get the Uploaded Image File name
 ```
 from google.colab import files
 
@@ -40,18 +40,18 @@ uploaded = files.upload()
 
 image_path = list(uploaded.keys())[0]
 ```
-To Load the YOLOv8 model (pre-trained) and Run detection on the uploaded image
+### To Load the YOLOv8 model (pre-trained) and Run detection on the uploaded image
 ```
 model = YOLO("yolov8n.pt") 
 
 results = model(image_path)
 ```
-To Display the result with bounding boxes and Save the result image with detections
+### To Display the result with bounding boxes and Save the result image with detections
 ```
 results[0].show()  
 results[0].save()
 ```
-To Count the number of detected objects and to Replace 'apple' with the class label name you are trying to count (depends on model's label map)
+### To Count the number of detected objects and to Replace 'apple' with the class label name you are trying to count (depends on model's label map)
 ```
 detected_classes = [results[0].names[int(result.cls)] for result in results[0].boxes] 
 print(detected_classes)
@@ -62,7 +62,7 @@ Install gtts
 ```
 !pip install gtts
 ```
-To Create a message based on the count and to Play the audio in Colab
+### To Create a message based on the count and to Play the audio in Colab
 ```
 from gtts import gTTS
 import IPython.display as ipd
