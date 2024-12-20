@@ -58,7 +58,8 @@ print(detected_classes)
 item_count = detected_classes.count(detected_classes[0])
 print(f"Number of items detected: {item_count}")
 ```
-Install gtts
+
+### Install gtts
 ```
 !pip install gtts
 ```
