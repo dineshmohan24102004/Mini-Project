@@ -22,7 +22,7 @@ Offers dietary suggestions based on available inventory.
 • Optimization for Edge Devices: Techniques like model quantization and pruning ensure smooth performance on Raspberry Pi.
 
 ## CODE:
-Install the YOLOv8 package
+### Install the YOLOv8 package
 ```
 !pip install ultralytics
 ```
